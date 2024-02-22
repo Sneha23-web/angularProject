@@ -1,0 +1,20 @@
+ <h2 class="text-center mt-3">Both-Decorator Works!</h2>
+<div class="m-3">
+    <h2>Input decorator</h2>
+<p>
+    Today's item: {{item}}
+</p>
+<p>
+    Today's item: {{titl}}
+</p>
+</div>
+<div class="m-3">
+    <hr>
+    <!-- <h2>output-decorator works!</h2> -->
+    <h2>Output Decorator</h2>
+    <label class="mt-2"><b>Add new Fruit: </b><br>
+    <input #newFruit [(ngModel)]="clearFruit"></label><br>
+    <button class="btn btn-md btn-primary mt-2" (click)="addNewEvent(newFruit.value)">Add to parent's list</button>
+    <hr>
+    </div>
+  

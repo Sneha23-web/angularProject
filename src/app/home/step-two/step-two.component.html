@@ -1,0 +1,9 @@
+<p>step-two works!</p>
+<form [formGroup]="stepTwo">
+<input type="text" formControlName="steptwoNumber">
+<p style="color: red;" *ngIf="this.stepTwo.invalid && errorMsg">Minimum value should be 10000</p>
+<p style="color: red;" *ngIf="this.stepTwo.invalid && errorMsgMax">Maximum value should not be 20000</p>
+
+</form>
+<button mat-button matStepperPrevious>Back</button>
+<button mat-button (click)="nextClick()">Next</button>

@@ -1,0 +1,39 @@
+<h1>Home Stepper</h1>
+<mat-stepper #stepper>
+  <mat-step [stepControl]="firstFormGroup" errorMessage="Name is required.">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>Step 1</ng-template>
+      <div>
+        <app-step-one></app-step-one>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" errorMessage="step2 is required.">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Step 2</ng-template>
+     
+      <div>
+        <app-step-two></app-step-two>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" errorMessage="step3 is required.">
+    <form [formGroup]="secondFormGroup">
+      <ng-template matStepLabel>Step 3</ng-template>
+     
+      <div>
+        <app-step-three></app-step-three>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button matStepperNext>Next</button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Step 4</ng-template>
+    <div>
+      <app-step-four></app-step-four>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+</mat-stepper>

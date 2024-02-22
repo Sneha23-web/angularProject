@@ -1,0 +1,12 @@
+<div class="m-3">
+<!-- <h2>output-decorator works!</h2> -->
+<h2>Child Component - Output-Decorator</h2>
+<label><b>Add new Item: </b><br>
+<input #newItem></label><br>
+<button class="btn btn-md btn-primary mt-2" (click)="addNewItem(newItem.value)">Add to parent's list</button><br>
+<hr>
+<label class="mt-2"><b>Add new Fruit: </b><br>
+<input #newFruit></label><br>
+<button class="btn btn-md btn-primary mt-2" (click)="addNewEvent(newFruit.value)">Add to parent's list</button>
+<hr>
+</div>

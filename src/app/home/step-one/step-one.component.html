@@ -1,0 +1,24 @@
+<p>step-one works!</p>
+<form [formGroup]="firstFormGroup">
+<input type="text" formControlName="firstCtrl" >
+<p style="color: red;" *ngIf="this.firstFormGroup.invalid && valueInvalid">Complete the form</p>
+</form>
+<br>
+<h3 style="margin-bottom: 0;">Enter Value:</h3>
+<div>
+    <input type="text" [(ngModel)]="val" >
+
+</div><br>
+<h3  style="margin-bottom: 0;">Entered Value is:</h3>
+<h3>{{val}}</h3><br>
+
+<h3>This is property binding</h3>
+<h3  style="margin-bottom: 0;">Entered Number is:</h3>
+<h3>{{number}}</h3>
+
+<p (click)="alertMsg()">Click here to see event binding</p>
+
+
+
+<button class="btn btn-lg btn-primary btn-block"(click)="next()">Next</button>
+<button class="btn btn-lg btn-danger btn-block m-3" type="submit" (click)="logout()">Logout</button>
